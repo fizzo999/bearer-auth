@@ -10,23 +10,24 @@ bearer authentication as well as basic auth on an express server using mongoDb a
 
 ### <center> links and resources </center>
 
-#### <center> [heroku deployed site](https://fizzo-api-server.herokuapp.com/) </center>
+#### <center> [heroku deployed site](https://fizzo-bearer-auth.herokuapp.com/) </center>
 
 ![app is working on swagger](src/1425.PNG)
 
-<!-- #### <center> [github actions](https://github.com/fizzo999/server-deployment-practice/actions) </center> -->
+#### <center> [github actions](https://github.com/fizzo999/server-deployment-practice/actions) </center>
 
 <!-- #### <center> [github pull request](https://github.com/fizzo999/server-deployment-practice/pull/1) </center> -->
 
-#### <center> [ci/cd - github](https://github.com/fizzo999/api-server/actions/runs/776719270) </center>
+#### <center> [ci/cd - github](https://github.com/fizzo999/bearer-auth/actions/runs/791249707) </center>
 
-#### <center> [merged pull request - github](https://github.com/fizzo999/api-server/pull/2) </center>
+#### <center> [merged pull request - github](https://github.com/fizzo999/bearer-auth/pull/2) </center>
 
 <!-- ![Cont Integration Cont Deploy](src/continuousIntegrationContinuousDepolyment002.png) -->
 
 ## <center> UML DIAGRAM </center>
 
-![web request response cycle diagram](src/1324-WRRC.PNG)
+![web request response cycle diagram 001](./assets/1599bearerAuthServer001.PNG)
+![web request response cycle diagram 002](./assets/1598bearerAuthServer001.PNG)
 
 ## Overview
 
@@ -35,7 +36,7 @@ building a basic express server with node.js. Writing our own tests with superte
 ## Setup
 
 git clone repo from github link:
-https://github.com/fizzo999/basic-api-server.git
+https://github.com/fizzo999/bearer-auth.git
 
 .env requirements
 PORT - Port Number
@@ -63,11 +64,11 @@ tests performed with jest and supertest
 
 ## Change Log
 
-04-22-2021 10:59pm - Application now has a fully-functional express server, with POST/GET/PUT/DELETE route ('/clothes') and ('/food') endpoints, mongodb working locally on my own machine.
+04-27-2021 10:59pm - Application now has a fully-functional express server, with POST route ('/signup') and ('/signin') endpoints, mongodb working locally on my own machine.
 
 ## Credits and Collaborations
 
-thank you Dan Engel for help with asynch function.
+thank you Elijah Prom for help with asynch function and code fix.
 
 Number and name of feature: setup file structure, write server.js, index,js, 404.js, 500.js, test.js.yml - repo on github and deploy to heroku
 Estimate of time needed to complete: 2 hours
