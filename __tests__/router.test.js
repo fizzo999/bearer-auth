@@ -1,6 +1,6 @@
 'use strict';
 
-// process.env.SECRET = "toes";
+process.env.SECRET = "toes";
 const dotenv = require('dotenv');
 dotenv.config();
 
