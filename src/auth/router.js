@@ -2,7 +2,7 @@
 
 const express = require('express');
 const authRouter = express.Router();
-
+// const jwt = require('jsonwebtoken'); 
 const User = require('./models/users-model.js');
 const basicAuth = require('./middleware/basic.js')
 const bearerAuth = require('./middleware/bearer.js')
@@ -21,14 +21,20 @@ authRouter.post('/signup', async (req, res, next) => {
   }
 });
 
-authRouter.post('/signin', basicAuth, (req, res, next) => {
-  const user = {
-    user: request.user,
-    token: request.user.token
+authRouter.post('/signin', basicAuth, async (req, res, next) => {
+  try {
+      const user = {
+        user: req.user,
+        token: req.user.token
   };
   res.status(200).json(user);
+  } catch(e) {
+    next(e.message);
+  }
+
 });
 
+// authRouter.get('/users', async (req, res) => {
 authRouter.get('/users', bearerAuth, async (req, res) => {
   const users = await User.find({});
   const list = users.map(user => user.username);

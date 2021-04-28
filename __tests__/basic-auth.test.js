@@ -1,8 +1,15 @@
 'use strict';
 
-require('@code-fellows/supergoose');
-const middleware = require('../../../src/auth/middleware/basic.js');
-const Users = require('../../../src/auth/models/users.js');
+
+// process.env.SECRET = "toes";
+const dotenv = require('dotenv');
+dotenv.config();
+
+const server = require('../src/server.js').server;
+const supergoose = require('@code-fellows/supergoose');
+const mockRequest = supergoose(server);
+const middleware = require('../src/auth/middleware/basic.js');
+const Users = require('../src/auth/models/users-model.js');
 
 let users = {
   admin: { username: 'admin', password: 'password' },
